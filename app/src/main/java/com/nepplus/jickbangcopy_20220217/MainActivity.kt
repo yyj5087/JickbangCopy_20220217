@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
         roomListView.setOnItemClickListener { adapterView, view, position, l ->
             val clickRoom = mRoomList[position]
             val myIntent = Intent(this,ViewRoomDetailActivity::class.java)
-            myIntent.putExtra("priceInfo",clickRoom.getFormattedPrice())
+            myIntent.putExtra("roomInfo",clickRoom)
             startActivity(myIntent)
         }
 
