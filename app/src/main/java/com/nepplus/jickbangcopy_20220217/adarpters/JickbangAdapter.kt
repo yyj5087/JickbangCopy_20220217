@@ -31,6 +31,8 @@ class JickbangAdapter(
 
         roomPrice.text = data.price.toString()
         descrip.text = data.description
+        roomAddressAndFloor.text = "${data.address},${data.getFormattedFloor()}"
+        roomPrice.text = data.getFormattedPrice()
 
 
 
