@@ -2,11 +2,15 @@ package com.nepplus.jickbangcopy_20220217
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.nepplus.jickbangcopy_20220217.adarpters.JickbangAdapter
 import com.nepplus.jickbangcopy_20220217.datas.JickbangData
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
+    lateinit var mAdapter: JickbangAdapter
     val mRoomList = ArrayList<JickbangData>()
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,6 +27,10 @@ class MainActivity : AppCompatActivity() {
         mRoomList.add(JickbangData(35600,"서울시 성북구", 4, "8번째 방입니다."))
         mRoomList.add(JickbangData(9600,"서울시 성동구", 2, "9번째 방입니다."))
         mRoomList.add(JickbangData(11000,"고양시 일산동구", 1, "10번째 방입니다."))
+
+        mAdapter = JickbangAdapter(this,R.layout.room_list_item,mRoomList)
+        roomListView.adapter = mAdapter
+
 
 
     }

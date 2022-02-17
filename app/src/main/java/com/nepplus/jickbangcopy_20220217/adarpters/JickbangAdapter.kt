@@ -23,6 +23,12 @@ class JickbangAdapter(
         }
         val row = temp!!
 
+        val data = row
+
+
+
+
+
         return row
 
 
