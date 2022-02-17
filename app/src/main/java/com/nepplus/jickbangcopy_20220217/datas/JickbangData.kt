@@ -15,7 +15,10 @@ class JickbangData(
             return NumberFormat.getNumberInstance(Locale.KOREA).format(this.price)
         }
         else{
-            return NumberFormat.getNumberInstance(Locale.KOREA).format(this.price)
+            val uk = this.price / 10000
+            val rest = this.price % 10000
+
+            return "${uk}억 ${NumberFormat.getInstance(Locale.KOREA).format(rest)}"
         }
     }
 
