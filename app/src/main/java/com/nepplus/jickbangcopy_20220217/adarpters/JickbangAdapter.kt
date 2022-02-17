@@ -23,7 +23,14 @@ class JickbangAdapter(
         }
         val row = temp!!
 
-        val data = row
+        val data = mList[position]
+
+        val descrip = row.findViewById<TextView>(R.id.txtDescrip)
+        val roomPrice = row.findViewById<TextView>(R.id.roomPrice)
+        val roomAddressAndFloor = row.findViewById<TextView>(R.id.roomAddressAndFloor)
+
+        roomPrice.text = data.price.toString()
+        descrip.text = data.description
 
 
 

@@ -24,14 +24,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
     <TextView
-        android:id="@+id/roomAddress"
+        android:id="@+id/roomAddressAndFloor"
         android:text="서울시 동대문구, 2층 등 정보"
         android:textColor="@color/black"
         android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
     <TextView
-        android:id="@+id/roomImfor"
+        android:id="@+id/txtDescrip"
         android:text="설면문구 자리"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
